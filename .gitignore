@@ -208,3 +208,7 @@ __marimo__/
 
 # Archive folder - local files not to be pushed to git
 archive/
+
+# Generated figure files
+uncertainty_case_examples_with_flair.png
+uncertainty_case_examples_with_flair.svg

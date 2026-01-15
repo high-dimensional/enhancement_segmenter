@@ -3022,7 +3022,7 @@ if 'dice' in results_df.columns and len(results_df) > 0:
     )
     
     if fig3:
-        fig3.savefig(os.path.join(figures_out, 'Figure_3.png'), dpi=300, bbox_inches='tight')
+        fig3.savefig(os.path.join(figures_out, 'Figure_3.png'), dpi=200, bbox_inches='tight')
         fig3.savefig(os.path.join(figures_out, 'Figure_3.svg'), format='svg', bbox_inches='tight')
         plt.show()
     else:
