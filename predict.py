@@ -29,7 +29,7 @@ import sys
 
 
 # Model configuration
-DATASET_NAME = "Dataset003_enhance_and_abnormality_batchconfig"
+DATASET_NAME = "Dataset500_EnhancementSegmenter"
 TRAINER = "nnUNetTrainer"
 CONFIGURATION = "3d_fullres"
 PLANS = "nnUNetResEncUNetPlans_80G"

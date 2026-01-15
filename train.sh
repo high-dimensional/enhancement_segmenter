@@ -14,7 +14,7 @@
 #   3. Prepare dataset in nnU-Net format (see split_sequences_abnormality_class.sh)
 #
 # Dataset structure:
-#   $nnUNet_raw/Dataset003_enhance_and_abnormality_batchconfig/
+#   $nnUNet_raw/Dataset500_EnhancementSegmenter/
 #   ├── dataset.json
 #   ├── imagesTr/
 #   │   ├── subject001_0000.nii.gz  (FLAIR)
@@ -29,7 +29,7 @@
 #   ./train.sh
 #
 # Configuration:
-#   - Dataset: 003 (Dataset003_enhance_and_abnormality_batchconfig)
+#   - Dataset: 500 (Dataset500_EnhancementSegmenter)
 #   - Planner: nnUNetPlannerResEncL
 #   - GPU memory target: 48GB (adjust for your hardware)
 #   - Configuration: 3d_fullres only
@@ -42,7 +42,7 @@
 set -e  # Exit on error
 
 # Configuration
-DATASET_ID=003
+DATASET_ID=500
 PLANS_NAME="nnUNetResEncUNetPlans_48G"
 GPU_MEMORY_TARGET=48  # GB - adjust based on your GPU
 
@@ -110,7 +110,7 @@ echo "Training complete!"
 echo "=============================================="
 echo ""
 echo "To run inference, use:"
-echo "  nnUNetv2_predict -d Dataset003_enhance_and_abnormality_batchconfig \\"
+echo "  nnUNetv2_predict -d Dataset500_EnhancementSegmenter \\"
 echo "    -i INPUT_FOLDER -o OUTPUT_FOLDER \\"
 echo "    -f 0 1 2 3 4 -tr nnUNetTrainer \\"
 echo "    -c 3d_fullres -p $PLANS_NAME"
