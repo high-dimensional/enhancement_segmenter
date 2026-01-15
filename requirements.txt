@@ -1,0 +1,18 @@
+# Core dependencies for Enhancement Segmenter
+# For training and inference with nnU-Net
+
+# nnU-Net v2 (includes PyTorch and other dependencies)
+nnunetv2>=2.2
+
+# Additional dependencies for analysis scripts
+numpy>=1.21
+pandas>=1.3
+nibabel>=3.2
+scipy>=1.7
+scikit-image>=0.19
+matplotlib>=3.5
+tqdm>=4.62
+
+# MONAI (for alternative SegResNet/SwinUNETR models)
+# Uncomment if using run_inference.py or SegResNet_enhancement.py
+# monai>=1.2
