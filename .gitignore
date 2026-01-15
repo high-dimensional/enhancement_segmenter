@@ -212,3 +212,37 @@ archive/
 # Generated figure files
 uncertainty_case_examples_with_flair.png
 uncertainty_case_examples_with_flair.svg
+
+# =============================================================================
+# Analysis and figure generation scripts (not needed for training/inference)
+# These are kept locally for reproducibility but not tracked in git
+# =============================================================================
+
+# Article figure generation
+nnunet_enhancement_prediction_article_figures.py
+
+# Model comparison analysis
+model_comparison_analysis.py
+model_comparison_results.json
+model_comparison_evaluation.txt
+compare_models.ipynb
+
+# Radiomics analysis scripts
+radiomics_enhancement_pattern_analysis.py
+radiomics_enhancement_pattern_analysis_improved.py
+radiomics_enhancement_pattern_analysis_distance.py
+radiomics_based_subgroup_analysis.py
+review_results_function.py
+
+# Alternative model implementations (MONAI-based, not nnU-Net)
+SegResNet_enhancement.py
+run_inference.py
+
+# Utility scripts
+softmax_to_nii.py
+
+# Old/superseded training scripts (train.sh is the current version)
+train_nnunet.sh
+train_nnunet_abnormality_class.sh
+train_nnunet_abnormality_class_bigger_batch_L_mod.sh
+split_sequences.sh

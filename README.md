@@ -217,35 +217,13 @@ nnUNetv2_find_best_configuration 003 -p nnUNetResEncUNetPlans_48G
 
 ```
 enhancement_segmenter/
-├── README.md                    # This file
-├── LICENSE                      # Apache 2.0 license
-├── requirements.txt             # Python dependencies
-├── predict.py                   # Simplified inference wrapper
-│
-├── # Training scripts
-├── train_nnunet_abnormality_class_bigger_batch_L_mod.sh  # Best model training
-├── train_nnunet_abnormality_class.sh                     # Dataset002 training
-├── train_nnunet.sh                                       # Dataset001 training
-├── split_sequences_abnormality_class.sh                  # Data preparation
-├── split_sequences.sh                                    # Data preparation (v1)
-│
-├── # Analysis and inference
-├── run_inference.py             # Advanced inference with MONAI
-├── SegResNet_enhancement.py     # Alternative SegResNet implementation
-├── softmax_to_nii.py            # Convert predictions to NIFTI
-│
-├── # Article figures and analysis
-├── nnunet_enhancement_prediction_article_figures.py     # Figure generation
-├── model_comparison_analysis.py                          # Model comparison
-├── model_comparison_results.json                         # Comparison results
-├── compare_models.ipynb                                  # Interactive analysis
-│
-├── # Radiomics analysis
-├── radiomics_enhancement_pattern_analysis.py
-├── radiomics_enhancement_pattern_analysis_improved.py
-├── radiomics_enhancement_pattern_analysis_distance.py
-├── radiomics_based_subgroup_analysis.py
-└── review_results_function.py
+├── README.md                           # This file
+├── LICENSE                             # Apache 2.0 license
+├── requirements.txt                    # Python dependencies
+├── predict.py                          # Simplified inference wrapper
+├── train.sh                            # Training script with exact parameters
+├── split_sequences_abnormality_class.sh  # Data preparation example
+└── ZENODO_UPLOAD.md                    # Instructions for model weight upload
 ```
 
 ## Citation
