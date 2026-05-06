@@ -293,17 +293,21 @@ See `train_nnunet_abnormality_class_bigger_batch_L_mod.sh` for the exact trainin
 nnUNetv2_find_best_configuration 003 -p nnUNetResEncUNetPlans_48G
 ```
 
+## Model Card
+
+A full model card following the [Hugging Face model-card schema](https://huggingface.co/docs/hub/model-cards) — covering intended use, out-of-scope use, biases and limitations, training procedure, evaluation, and technical specifications — is available at [`MODEL_CARD.md`](MODEL_CARD.md).
+
 ## Repository Structure
 
 ```
 enhancement_segmenter/
-├── README.md                           # This file
-├── LICENSE                             # Apache 2.0 license
-├── requirements.txt                    # Python dependencies
-├── predict.py                          # Simplified inference wrapper
-├── train.sh                            # Training script with exact parameters
-├── split_sequences_abnormality_class.sh  # Data preparation example
-└── ZENODO_UPLOAD.md                    # Instructions for model weight upload
+├── README.md                             # This file
+├── MODEL_CARD.md                         # Hugging Face-style model card
+├── LICENSE                               # Apache 2.0 license
+├── requirements.txt                      # Python dependencies
+├── predict.py                            # Simplified inference wrapper
+├── train.sh                              # Training script with exact parameters
+└── split_sequences_abnormality_class.sh  # Data preparation example
 ```
 
 ## Citation
