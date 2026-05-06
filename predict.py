@@ -30,7 +30,7 @@ import sys
 
 # Model configuration
 DATASET_NAME = "Dataset003_enhance_and_abnormality_batchconfig"
-TRAINER = "nnUNetTrainer"
+TRAINER = "nnUNetTrainer_4000epochs"
 CONFIGURATION = "3d_fullres"
 PLANS = "nnUNetResEncUNetPlans_80G"
 FOLDS = "0 1 2 3 4"

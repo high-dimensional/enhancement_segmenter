@@ -1,6 +1,7 @@
 # Enhancement Segmenter
 
 [![arXiv](https://img.shields.io/badge/arXiv-2508.16650-b31b1b.svg)](https://arxiv.org/abs/2508.16650)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20055549.svg)](https://doi.org/10.5281/zenodo.20055549)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 Deep learning model for predicting brain tumour contrast enhancement from non-contrast MRI sequences.
@@ -61,7 +62,7 @@ nnUNetv2_predict \
     -i /path/to/input_folder \
     -o /path/to/output_folder \
     -f 0 1 2 3 4 \
-    -tr nnUNetTrainer \
+    -tr nnUNetTrainer_4000epochs \
     -c 3d_fullres \
     -p nnUNetResEncUNetPlans_80G \
     -chk checkpoint_best.pth
@@ -111,9 +112,7 @@ export nnUNet_results="/path/to/nnUNet_results"
 
 Download the pretrained model weights from Zenodo:
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
-
-> **Note**: Update the Zenodo DOI badge once the upload is complete.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20055549.svg)](https://doi.org/10.5281/zenodo.20055549)
 
 ### Directory Structure
 
@@ -122,7 +121,7 @@ After downloading, place the model files in the following structure:
 ```
 $nnUNet_results/
 └── Dataset003_enhance_and_abnormality_batchconfig/
-    └── nnUNetTrainer__nnUNetResEncUNetPlans_80G__3d_fullres/
+    └── nnUNetTrainer_4000epochs__nnUNetResEncUNetPlans_80G__3d_fullres/
         ├── fold_0/
         │   └── checkpoint_best.pth
         ├── fold_1/
@@ -134,7 +133,13 @@ $nnUNet_results/
         ├── fold_4/
         │   └── checkpoint_best.pth
         ├── dataset.json
-        └── plans.json
+        ├── plans.json
+        ├── dataset_fingerprint.json
+        └── crossval_results_folds_0_1_2_3_4/
+            ├── postprocessing.pkl
+            ├── postprocessing.json
+            ├── plans.json
+            └── dataset.json
 ```
 
 ## Usage
@@ -167,7 +172,7 @@ nnUNetv2_predict \
     -i /path/to/input_folder \
     -o /path/to/output_folder \
     -f 0 1 2 3 4 \
-    -tr nnUNetTrainer \
+    -tr nnUNetTrainer_4000epochs \
     -c 3d_fullres \
     -p nnUNetResEncUNetPlans_80G \
     -chk checkpoint_best.pth
