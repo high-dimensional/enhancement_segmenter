@@ -24,6 +24,28 @@ Ruffle JK, Mohinta S, Pombo G, Biswas A, Campbell A, Davagnanam I, Doig D, Hamma
 - Developed using **11,089** brain MRI studies (9,980 training + 1,109 held-out test) from 10 international datasets
 - Validated across glioma, meningioma, metastases, and post-resection cases in both adult and paediatric populations
 
+## Figures from the paper
+
+### Figure 2 — Study schematic
+
+![Study schematic](figures/figure_2_study_schematic.png)
+
+The model is trained to predict enhancing intracranial disease from T1-, T2-, and FLAIR-weighted imaging alone. Ground truth is derived from the full multimodal acquisition including T1c. Downstream evaluation covers radiologist benchmarking, equity calibration, and head-to-head model comparison.
+
+### Figure 4 — Test-set cases missed by radiologists
+
+![Lesions missed by radiologists](figures/figure_4_lesions_missed.png)
+
+Representative test-set cases that expert radiologists, when reviewing the non-contrast imaging only, wrongly judged to contain no post-contrast enhancement. The model's predicted enhancing-tumour mask is shown alongside ground truth.
+
+### Figure 5 — Brain tumour enhancement detection performance
+
+![Detection performance](figures/figure_5_detection_performance.png)
+
+Model performance in detecting enhancing tumour from non-contrast sequences across (a) the entire cohort, (b) individual datasets, (c) pathologies, (d) countries of origin, (e) patient ages, and (f) patient sexes.
+
+Figures reproduced from the paper (arXiv:2508.16650). Full captions and additional figures (1, 3, 6) are available in the [preprint PDF](https://arxiv.org/pdf/2508.16650).
+
 ## Quick Start
 
 ### 1. Install nnU-Net v2
