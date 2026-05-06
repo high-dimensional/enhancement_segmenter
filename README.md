@@ -89,12 +89,36 @@ The output segmentation will contain: 0=background, 1=brain, 2=non-enhancing abn
 
 ## Installation
 
-### Requirements
+### Minimum requirements
 
-- Python 3.9+
-- PyTorch 2.0+
-- CUDA-capable GPU with 8GB+ VRAM (for inference)
-- ~48GB GPU VRAM recommended for training
+- Python 3.9 or newer
+- PyTorch 2.0 or newer (CUDA build matching your GPU driver)
+- CUDA-capable GPU with ≥ 8 GB VRAM (inference)
+- ≥ 48 GB GPU VRAM recommended for training (a single 48 GB GPU is sufficient for the configuration shipped here)
+
+### Software dependencies and tested environment
+
+The released model was developed and validated under the following environment. The model is also expected to run on any compatible newer version, but the configuration below is what we have explicitly verified.
+
+| Component | Version |
+|---|---|
+| Operating system | Ubuntu 22.04.5 LTS (Linux kernel 6.8.0, x86_64) |
+| GPU hardware | NVIDIA RTX 6000 Ada Generation (48 GB VRAM) |
+| NVIDIA driver | 580.105.08 |
+| CUDA toolkit | 13.0 (build `cu130`) |
+| cuDNN | 9.1.x |
+| Python | 3.10.12 |
+| PyTorch | 2.11.0 (`+cu130` build) |
+| nnU-Net | v2 (≥ 2.2) |
+| numpy | ≥ 1.21 |
+| pandas | ≥ 1.3 |
+| nibabel | ≥ 3.2 |
+| scipy | ≥ 1.7 |
+| scikit-image | ≥ 0.19 |
+| matplotlib | ≥ 3.5 |
+| tqdm | ≥ 4.62 |
+
+The Python dependencies are also pinned in [`requirements.txt`](requirements.txt). nnU-Net v2 itself transitively pulls in PyTorch and most heavyweight ML dependencies; the table above lists the upstream toolchain that was confirmed working on a clean install.
 
 ### Install nnU-Net v2
 
