@@ -21,7 +21,7 @@ Ruffle JK, Mohinta S, Pombo G, Biswas A, Campbell A, Davagnanam I, Doig D, Hamma
 - **83%** balanced accuracy
 - **91.5%** sensitivity
 - **74.4%** specificity
-- Trained on **11,089** brain MRI studies
+- Developed using **11,089** brain MRI studies (9,980 training + 1,109 held-out test) from 10 international datasets
 - Validated across glioma, meningioma, metastases, and post-resection cases in both adult and paediatric populations
 
 ## Quick Start
@@ -83,7 +83,7 @@ The output segmentation will contain: 0=background, 1=brain, 2=non-enhancing abn
   - 2: Abnormality (non-enhancing lesion)
   - 3: Enhancing tumour (predicted)
 - **Training**: 5-fold cross-validation
-- **Best Model Dice Score**: 0.7859
+- **Test-set Dice distribution**: 76.8% of patients with Dice > 0.3, 67.5% > 0.5, 50.2% > 0.7
 
 ## Installation
 
