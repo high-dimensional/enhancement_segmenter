@@ -377,4 +377,4 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## Contact
 
-For questions about this code, please open an issue on GitHub or contact the corresponding author.
+For questions about the code or the bundled data, please open an issue on GitHub or contact the corresponding author, [Dr James K. Ruffle](mailto:j.ruffle@ucl.ac.uk).
